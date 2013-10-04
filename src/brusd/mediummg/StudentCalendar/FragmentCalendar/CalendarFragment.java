@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,7 +34,7 @@ import brusd.mediummg.StudentCalendar.R;
 public class CalendarFragment extends Fragment {
     private static final String tag = "MyCalendarActivity";
     private TextView currentMonth;
-    private Button selectedDayMonthYearButton;
+
     private ImageView prevMonth;
     private ImageView nextMonth;
     private GridView calendarView;
@@ -46,7 +47,7 @@ public class CalendarFragment extends Fragment {
     private static final String dateTemplate = "MMMM yyyy";
 
 
-    private View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_calendar_layout, container, false);
@@ -56,18 +57,43 @@ public class CalendarFragment extends Fragment {
         Log.d(tag, "Calendar Instance:= " + "Month: " + month + " " + "Year: "
                 + year);
 
-        selectedDayMonthYearButton = (Button) view.findViewById(R.id.selectedDayMonthYear);
-        selectedDayMonthYearButton.setText("Selected: ");
+
 
         prevMonth = (ImageView) view.findViewById(R.id.prevMonth);
-        //prevMonth.setOnClickListener(this);
+        prevMonth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (month <= 1) {
+                    month = 12;
+                    year--;
+                } else {
+                    month--;
+                }
+                Log.d(tag, "Setting Prev Month in GridCellAdapter: " + "Month: "
+                        + month + " Year: " + year);
+                setGridCellAdapterToDate(month, year);
+            }
+        });
 
         currentMonth = (TextView) view.findViewById(R.id.currentMonth);
         currentMonth.setText(DateFormat.format(dateTemplate,
                 _calendar.getTime()));
 
         nextMonth = (ImageView) view.findViewById(R.id.nextMonth);
-        //nextMonth.setOnClickListener(this);
+        nextMonth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (month > 11) {
+                    month = 1;
+                    year++;
+                } else {
+                    month++;
+                }
+                Log.d(tag, "Setting Next Month in GridCellAdapter: " + "Month: "
+                        + month + " Year: " + year);
+                setGridCellAdapterToDate(month, year);
+            }
+        });
 
         calendarView = (GridView) view.findViewById(R.id.calendar);
 
@@ -95,32 +121,8 @@ public class CalendarFragment extends Fragment {
         calendarView.setAdapter(adapter);
     }
 
-    //@Override
-    public void onClick(View v) {
-        if (v == prevMonth) {
-            if (month <= 1) {
-                month = 12;
-                year--;
-            } else {
-                month--;
-            }
-            Log.d(tag, "Setting Prev Month in GridCellAdapter: " + "Month: "
-                    + month + " Year: " + year);
-            setGridCellAdapterToDate(month, year);
-        }
-        if (v == nextMonth) {
-            if (month > 11) {
-                month = 1;
-                year++;
-            } else {
-                month++;
-            }
-            Log.d(tag, "Setting Next Month in GridCellAdapter: " + "Month: "
-                    + month + " Year: " + year);
-            setGridCellAdapterToDate(month, year);
-        }
 
-    }
+
 
     @Override
     public void onDestroy() {
@@ -337,7 +339,23 @@ public class CalendarFragment extends Fragment {
 
             // Get a reference to the Day gridcell
             gridcell = (Button) row.findViewById(R.id.calendar_day_gridcell);
-            //gridcell.setOnClickListener(this);
+            gridcell.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    //TODO: Implament logig to click cell
+                   String date_month_year = (String) v.getTag();
+  //                  Toast.makeText(getActivity(), "Selected: " + date_month_year, Toast.LENGTH_LONG).show();
+                    Log.e("Selected date", date_month_year);
+                    try {
+                        Date parsedDate = dateFormatter.parse(date_month_year);
+                        Log.d(tag, "Parsed Date: " + parsedDate.toString());
+
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
             // ACCOUNT FOR SPACING
 
@@ -375,19 +393,7 @@ public class CalendarFragment extends Fragment {
             return row;
         }
 
-        //@Override
-        public void onClick(View view) {
-            String date_month_year = (String) view.getTag();
-            selectedDayMonthYearButton.setText("Selected: " + date_month_year);
-            Log.e("Selected date", date_month_year);
-            try {
-                Date parsedDate = dateFormatter.parse(date_month_year);
-                Log.d(tag, "Parsed Date: " + parsedDate.toString());
 
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-        }
 
         public int getCurrentDayOfMonth() {
             return currentDayOfMonth;
