@@ -3,6 +3,7 @@ package brusd.mediummg.StudentCalendar.FragmentCalendar;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -26,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
+import brusd.mediummg.StudentCalendar.DataStoregCalendar;
 import brusd.mediummg.StudentCalendar.R;
 
 /**
@@ -51,11 +53,14 @@ public class CalendarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_calendar_layout, container, false);
+
+        checkSelectedDay();
+
         _calendar = Calendar.getInstance(Locale.getDefault());
         month = _calendar.get(Calendar.MONTH) + 1;
         year = _calendar.get(Calendar.YEAR);
-        Log.d(tag, "Calendar Instance:= " + "Month: " + month + " " + "Year: "
-                + year);
+
+
 
 
 
@@ -69,8 +74,7 @@ public class CalendarFragment extends Fragment {
                 } else {
                     month--;
                 }
-                Log.d(tag, "Setting Prev Month in GridCellAdapter: " + "Month: "
-                        + month + " Year: " + year);
+
                 setGridCellAdapterToDate(month, year);
             }
         });
@@ -89,8 +93,7 @@ public class CalendarFragment extends Fragment {
                 } else {
                     month++;
                 }
-                Log.d(tag, "Setting Next Month in GridCellAdapter: " + "Month: "
-                        + month + " Year: " + year);
+
                 setGridCellAdapterToDate(month, year);
             }
         });
@@ -106,6 +109,13 @@ public class CalendarFragment extends Fragment {
         return view;
     }
 
+    private void checkSelectedDay(){
+        if(DataStoregCalendar.getSelectedDay().equals("")){
+            Date date = Calendar.getInstance().getTime();
+            SimpleDateFormat formatter = new SimpleDateFormat("d MMMM yyyy");
+            DataStoregCalendar.setSelectedDay(formatter.format(date));
+        }
+    }
     /**
      *
      * @param month
@@ -150,6 +160,7 @@ public class CalendarFragment extends Fragment {
         private Button gridcell;
         private TextView num_events_per_day;
         private final HashMap<String, Integer> eventsPerMonthMap;
+
         private final SimpleDateFormat dateFormatter = new SimpleDateFormat(
                 "dd-MMM-yyyy");
 
@@ -205,7 +216,7 @@ public class CalendarFragment extends Fragment {
          * @param yy
          */
         private void printMonth(int mm, int yy) {
-            Log.d(tag, "==> printMonth: mm: " + mm + " " + "yy: " + yy);
+
             int trailingSpaces = 0;
             int daysInPrevMonth = 0;
             int prevMonth = 0;
@@ -326,28 +337,23 @@ public class CalendarFragment extends Fragment {
             gridcell.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    DataStoregCalendar.setSelectedDay(v.getTag().toString());
 
-                    //TODO: Implament logig to click cell
-                   String date_month_year = (String) v.getTag();
-  //                  Toast.makeText(getActivity(), "Selected: " + date_month_year, Toast.LENGTH_LONG).show();
-                    Log.e("Selected date", date_month_year);
-                    try {
-                        Date parsedDate = dateFormatter.parse(date_month_year);
-                        Log.d(tag, "Parsed Date: " + parsedDate.toString());
-
-                    } catch (ParseException e) {
-                        e.printStackTrace();
+                    if (getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+                        DetailDayFragment.changTargetDay();
                     }
+
                 }
             });
 
             // ACCOUNT FOR SPACING
 
-            Log.d(tag, "Current Day: " + getCurrentDayOfMonth());
+
             String[] day_color = list.get(position).split("-");
             String theday = day_color[0];
             String themonth = day_color[2];
             String theyear = day_color[3];
+
             if ((!eventsPerMonthMap.isEmpty()) && (eventsPerMonthMap != null)) {
                 if (eventsPerMonthMap.containsKey(theday)) {
                     num_events_per_day = (TextView) row
@@ -360,8 +366,7 @@ public class CalendarFragment extends Fragment {
             // Set the Day GridCell
             gridcell.setText(theday);
             gridcell.setTag(theday + "-" + themonth + "-" + theyear);
-            Log.d(tag, "Setting GridCell " + theday + "-" + themonth + "-"
-                    + theyear);
+
 
             if (day_color[1].equals("GREY")) {
                 gridcell.setTextColor(getResources()

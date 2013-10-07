@@ -7,4 +7,13 @@ import java.text.SimpleDateFormat;
  */
 public class DataStoregCalendar {
 
+    private static String selectedDay = "";
+
+    public static void setSelectedDay(String selected_Day){
+        selectedDay = selected_Day;
+    }
+
+    public static String getSelectedDay(){
+        return selectedDay;
+    }
 }
