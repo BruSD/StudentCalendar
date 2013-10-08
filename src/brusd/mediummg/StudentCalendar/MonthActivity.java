@@ -30,10 +30,6 @@ public class MonthActivity extends Activity {
             Fragment newFragment = new DetailDayFragment();
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             ft.add(R.id.day_or_pair_frame, newFragment).commit();
-
         }
-
-
-
     }
 }

@@ -147,11 +147,12 @@ public class CalendarFragment extends Fragment {
 
         private final List<String> list;
         private static final int DAY_OFFSET = 1;
-        private final String[] weekdays = new String[] { "Mon", "Tue",
-                "Wed", "Thu", "Fri", "Sat","Sun" };
-        private final String[] months = { "January", "February", "March",
-                "April", "May", "June", "July", "August", "September",
-                "October", "November", "December" };
+        private final String[] weekdays =  getActivity().getResources().getStringArray(R.array.day_of_week_array);
+
+                //new String[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat","Sun" };
+
+        private final String[] months = getActivity().getResources().getStringArray(R.array.month_of_year_array);
+                //{ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
         private final int[] daysOfMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30,
                 31, 30, 31 };
         private int daysInMonth;
@@ -162,7 +163,7 @@ public class CalendarFragment extends Fragment {
         private final HashMap<String, Integer> eventsPerMonthMap;
 
         private final SimpleDateFormat dateFormatter = new SimpleDateFormat(
-                "dd-MMM-yyyy");
+                "dd MMM yyyy");
 
         // Days in Current Month
         public GridCellAdapter(Context context, int textViewResourceId,
@@ -170,16 +171,13 @@ public class CalendarFragment extends Fragment {
             super();
             this._context = context;
             this.list = new ArrayList<String>();
-            Log.d(tag, "==> Passed in Date FOR Month: " + month + " "
-                    + "Year: " + year);
+
             Calendar calendar = Calendar.getInstance();
             setCurrentDayOfMonth(calendar.get(Calendar.DAY_OF_MONTH));
             setCurrentWeekDay(calendar.get(Calendar.DAY_OF_WEEK));
 
 
-            Log.d(tag, "New Calendar:= " + calendar.getTime().toString());
-            Log.d(tag, "CurrentDayOfWeek :" + getCurrentWeekDay());
-            Log.d(tag, "CurrentDayOfMonth :" + getCurrentDayOfMonth());
+
 
             // Print Month
             printMonth(month, year);
@@ -365,7 +363,7 @@ public class CalendarFragment extends Fragment {
 
             // Set the Day GridCell
             gridcell.setText(theday);
-            gridcell.setTag(theday + "-" + themonth + "-" + theyear);
+            gridcell.setTag(theday + " " + themonth + " " + theyear);
 
 
             if (day_color[1].equals("GREY")) {
