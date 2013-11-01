@@ -11,10 +11,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 
 
+import brusd.mediummg.StudentCalendar.AppDatabase.AppDB;
+import brusd.mediummg.StudentCalendar.AppDatabase.TestData;
 import brusd.mediummg.StudentCalendar.FragmentCalendar.DetailDayFragment;
 
 public class MonthActivity extends ActionBarActivity {
 
+    private AppDB appDB;
 
     /**
      * Called when the activity is first created.
@@ -36,6 +39,9 @@ public class MonthActivity extends ActionBarActivity {
         }
 
         getSupportActionBar();
+
+        appDB = AppDB.getInstance(this);
+        new TestData().addingTo(appDB);
 
     }
 }
