@@ -44,10 +44,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a805832-6e4d-4d62-b045-f7823cee54ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java" afterPath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java" afterPath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java" afterPath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StudentCalendar.iws" />
@@ -104,7 +101,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java" line="287" class="brusd.mediummg.StudentCalendar.AppDatabase.AppDB" package="brusd.mediummg.StudentCalendar.AppDatabase">
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java" line="314" class="brusd.mediummg.StudentCalendar.AppDatabase.AppDB" package="brusd.mediummg.StudentCalendar.AppDatabase">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -132,29 +129,38 @@
       <file leaf-file-name="AppDB.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="268" column="59" selection-start="9389" selection-end="9389" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1139">
+            <state line="314" column="0" selection-start="11659" selection-end="11659" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="1938">
               <folding>
                 <element signature="method#addTeacher#0;class#AppDB#0" expanded="false" />
                 <element signature="method#addLessons#0;class#AppDB#0" expanded="false" />
                 <element signature="method#addTemplates#0;class#AppDB#0" expanded="false" />
                 <element signature="method#getAllLessons#0;class#AppDB#0" expanded="false" />
                 <element signature="method#getAllTeachers#0;class#AppDB#0" expanded="false" />
-                <element signature="method#getLessonsFor#0;class#AppDB#0" expanded="false" />
                 <element signature="e#9493#9518#0" expanded="true" />
-                <element signature="e#10853#10869#0" expanded="true" />
+                <element signature="e#10870#10886#0" expanded="true" />
                 <element signature="method#getAllLessonsAsHashMap#0;class#AppDB#0" expanded="false" />
-                <element signature="e#11582#11599#0" expanded="true" />
+                <element signature="e#11840#11874#0" expanded="true" />
+                <element signature="e#12473#12489#0" expanded="true" />
                 <element signature="method#getAllTeachersAsHashMap#0;class#AppDB#0" expanded="false" />
-                <element signature="e#12335#12352#0" expanded="true" />
+                <element signature="e#12893#12910#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MonthActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="233" column="44" selection-start="13118" selection-end="13118" vertical-scroll-proportion="0.0" vertical-offset="2410" max-vertical-offset="4182">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MonthActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="10" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="765">
+            <state line="45" column="10" selection-start="1256" selection-end="1256" vertical-scroll-proportion="1.0621622" vertical-offset="202" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -173,24 +179,6 @@
         <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppOpenHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="48" column="65" selection-start="2212" selection-end="2246" vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="2159">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SQLiteDatabase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/database/sqlite/SQLiteDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1195" column="72" selection-start="51025" selection-end="51034" vertical-scroll-proportion="0.0" vertical-offset="18547" max-vertical-offset="36465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestData.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="232" column="64" selection-start="13063" selection-end="13063" vertical-scroll-proportion="0.5162162" vertical-offset="3736" max-vertical-offset="4182">
               <folding />
             </state>
           </provider>
@@ -551,7 +539,11 @@
       <created>1383294390126</created>
       <updated>1383294390126</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="select for template name and day of week">
+      <created>1383734792166</created>
+      <updated>1383734792166</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -559,11 +551,11 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32767403" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32767403" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4991511" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29881155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -596,7 +588,8 @@
     </option>
     <MESSAGE value="-Base Calendar" />
     <MESSAGE value="DB and test data" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB and test data" />
+    <MESSAGE value="select for template name and day of week" />
+    <option name="LAST_COMMIT_MESSAGE" value="select for template name and day of week" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -668,9 +661,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="42" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/database/sqlite/SQLiteDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1195" column="72" selection-start="51025" selection-end="51034" vertical-scroll-proportion="0.0" vertical-offset="19465" max-vertical-offset="36465">
+        <state line="1195" column="72" selection-start="51025" selection-end="51034" vertical-scroll-proportion="2.710811" vertical-offset="18547" max-vertical-offset="36465">
           <folding />
         </state>
       </provider>
@@ -684,41 +684,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="268" column="59" selection-start="9389" selection-end="9389" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1139">
+        <state line="314" column="0" selection-start="11659" selection-end="11659" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="1938">
           <folding>
             <element signature="method#addTeacher#0;class#AppDB#0" expanded="false" />
             <element signature="method#addLessons#0;class#AppDB#0" expanded="false" />
             <element signature="method#addTemplates#0;class#AppDB#0" expanded="false" />
             <element signature="method#getAllLessons#0;class#AppDB#0" expanded="false" />
             <element signature="method#getAllTeachers#0;class#AppDB#0" expanded="false" />
-            <element signature="method#getLessonsFor#0;class#AppDB#0" expanded="false" />
             <element signature="e#9493#9518#0" expanded="true" />
-            <element signature="e#10853#10869#0" expanded="true" />
+            <element signature="e#10870#10886#0" expanded="true" />
             <element signature="method#getAllLessonsAsHashMap#0;class#AppDB#0" expanded="false" />
-            <element signature="e#11582#11599#0" expanded="true" />
+            <element signature="e#11840#11874#0" expanded="true" />
+            <element signature="e#12473#12489#0" expanded="true" />
             <element signature="method#getAllTeachersAsHashMap#0;class#AppDB#0" expanded="false" />
-            <element signature="e#12335#12352#0" expanded="true" />
+            <element signature="e#12893#12910#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="10" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="42" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="64" selection-start="13063" selection-end="13063" vertical-scroll-proportion="0.5162162" vertical-offset="3736" max-vertical-offset="4182">
+        <state line="233" column="44" selection-start="13118" selection-end="13118" vertical-scroll-proportion="0.0" vertical-offset="2410" max-vertical-offset="4182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="10" selection-start="1256" selection-end="1256" vertical-scroll-proportion="1.0621622" vertical-offset="202" max-vertical-offset="765">
           <folding />
         </state>
       </provider>

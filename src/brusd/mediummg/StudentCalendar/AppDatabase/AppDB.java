@@ -283,7 +283,7 @@ public class AppDB {
         templateName = templateName.replace("'","''");
 
         HashMap<Integer, String> teachers = getAllTeachersAsHashMap();
-        HashMap<Integer, String> lessons = getAllLessonsAsHashMap();
+        HashMap<Integer, HashMap<String, String>> lessons = getAllLessonsAsHashMap();
 
         Cursor cursor = appDB.query(AppOpenHelper.TABLE_TEMPLATES,
                 new String[]{AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number,
@@ -303,7 +303,8 @@ public class AppDB {
             temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, cursor.getInt(0));
             temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, cursor.getString(1));
             temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, cursor.getString(2));
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, lessons.get(cursor.getInt(3)));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, lessons.get(cursor.getInt(3)).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, lessons.get(cursor.getInt(3)).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color));
             temp.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name, teachers.get(cursor.getInt(4)));
             result.add(temp);
         }
@@ -314,14 +315,14 @@ public class AppDB {
         return result;
     }
 
-    private HashMap<Integer, String> getAllLessonsAsHashMap() {
-        HashMap<Integer, String> result = new HashMap<Integer, String>();
-
+    private HashMap<Integer, HashMap<String, String>> getAllLessonsAsHashMap() {
+        HashMap<Integer, HashMap<String, String>> result = new HashMap<Integer, HashMap<String, String>>();
 
         Cursor cursor = appDB.query(AppOpenHelper.TABLE_LESSONS,
                 new String[]{
                         AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson,
-                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name},
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name,
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color},
                 null,
                 null,
                 null,
@@ -330,8 +331,11 @@ public class AppDB {
 
         while(cursor.moveToNext()) {
             int id = cursor.getInt(0);
-            String name = cursor.getString(1);
-            result.put(id, name);
+
+            HashMap<String, String> temp = new HashMap<String, String>();
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, cursor.getString(1));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, cursor.getString(2));
+            result.put(id, temp);
         }
         cursor.close();
 
