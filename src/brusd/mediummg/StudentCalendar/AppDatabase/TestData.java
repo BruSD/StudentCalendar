@@ -46,7 +46,7 @@ public class TestData {
         HashMap<String, Object> temp;
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 1);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 1);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "08:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "09:35");
@@ -56,7 +56,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 1);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "09:55");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "11:30");
@@ -66,7 +66,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 1);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "12:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "13:35");
@@ -78,7 +78,7 @@ public class TestData {
         //
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 2);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 1);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "08:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "09:35");
@@ -88,7 +88,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 2);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "09:55");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "11:30");
@@ -98,7 +98,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 2);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "12:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "13:35");
@@ -110,7 +110,7 @@ public class TestData {
         //
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 3);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 4);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 1);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "08:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "09:35");
@@ -120,7 +120,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 3);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 4);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "09:55");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "11:30");
@@ -130,7 +130,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 3);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 4);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "12:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "13:35");
@@ -140,7 +140,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 3);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 4);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 4);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "13:55");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "15:15");
@@ -152,7 +152,7 @@ public class TestData {
         //
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 4);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 5);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "09:55");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "11:30");
@@ -162,7 +162,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 4);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 5);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "12:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "13:35");
@@ -172,7 +172,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 4);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 5);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 4);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "13:55");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "15:15");
@@ -184,7 +184,7 @@ public class TestData {
         //
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 5);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 6);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 1);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "08:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "09:35");
@@ -194,7 +194,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 5);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 6);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 2);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "09:55");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "11:30");
@@ -204,7 +204,7 @@ public class TestData {
         lessons.add(temp);
 
         temp = new HashMap<String, Object>();
-        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 5);
+        temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day, 6);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, 3);
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, "12:00");
         temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, "13:35");
@@ -220,7 +220,7 @@ public class TestData {
 
 
     private int teacherIDForName(AppDB appDB, String name) {
-        ArrayList<HashMap<String,Object>> teachers = appDB.getTeachers();
+        ArrayList<HashMap<String,Object>> teachers = appDB.getAllTeachers();
         for (HashMap<String,Object> object : teachers) {
             if (name.equals((String)object.get(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name))) {
                 return (Integer)object.get(AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher);
@@ -230,7 +230,7 @@ public class TestData {
     }
 
     private int lessonIDForName(AppDB appDB, String name) {
-        ArrayList<HashMap<String,Object>> lessons = appDB.getLessons();
+        ArrayList<HashMap<String,Object>> lessons = appDB.getAllLessons();
         for (HashMap<String,Object> object : lessons) {
             if (name.equals((String)object.get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name))) {
                 return (Integer)object.get(AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson);

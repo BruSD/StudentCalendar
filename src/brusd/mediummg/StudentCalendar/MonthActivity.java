@@ -43,5 +43,7 @@ public class MonthActivity extends ActionBarActivity {
         appDB = AppDB.getInstance(this);
         new TestData().addingTo(appDB);
 
+        //appDB.getLessonsFor("Расписание", 2);
+
     }
 }
