@@ -11,8 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 
 
-import brusd.mediummg.StudentCalendar.AppDatabase.AppDB;
-import brusd.mediummg.StudentCalendar.AppDatabase.TestData;
+
 import brusd.mediummg.StudentCalendar.FragmentCalendar.DetailDayFragment;
 
 public class MonthActivity extends ActionBarActivity {
@@ -37,11 +36,6 @@ public class MonthActivity extends ActionBarActivity {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.day_or_pair_frame, newFragment).commit();
         }
-
-        getSupportActionBar();
-
-
-
 
 
     }

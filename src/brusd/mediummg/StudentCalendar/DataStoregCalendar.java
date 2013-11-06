@@ -1,7 +1,5 @@
 package brusd.mediummg.StudentCalendar;
 
-import java.text.SimpleDateFormat;
-
 /**
  * Created by BruSD on 05.10.13.
  */
@@ -16,4 +14,6 @@ public class DataStoregCalendar {
     public static String getSelectedDay(){
         return selectedDay;
     }
+
+
 }

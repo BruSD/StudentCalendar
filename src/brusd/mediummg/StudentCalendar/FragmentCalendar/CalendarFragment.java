@@ -3,6 +3,7 @@ package brusd.mediummg.StudentCalendar.FragmentCalendar;
 import android.annotation.SuppressLint;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,6 +29,7 @@ import java.util.List;
 import java.util.Locale;
 
 import brusd.mediummg.StudentCalendar.DataStoregCalendar;
+import brusd.mediummg.StudentCalendar.DayActivity;
 import brusd.mediummg.StudentCalendar.R;
 
 /**
@@ -350,6 +352,9 @@ public class CalendarFragment extends Fragment {
 
                     if (getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
                         DetailDayFragment.changTargetDay();
+                    }else {
+                        Intent intent = new Intent(getActivity(), DayActivity.class);
+                        startActivity(intent);
                     }
 
                 }
