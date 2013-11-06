@@ -17,7 +17,7 @@ import brusd.mediummg.StudentCalendar.FragmentCalendar.DetailDayFragment;
 
 public class MonthActivity extends ActionBarActivity {
 
-    private AppDB appDB;
+
 
     /**
      * Called when the activity is first created.
@@ -40,10 +40,9 @@ public class MonthActivity extends ActionBarActivity {
 
         getSupportActionBar();
 
-        appDB = AppDB.getInstance(this);
-        new TestData().addingTo(appDB);
 
-        //appDB.getLessonsFor("Расписание", 2);
+
+
 
     }
 }

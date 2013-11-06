@@ -30,7 +30,7 @@ public class TestData {
         appDB.addLessons("Міжнародні економічні відносини", "#FFBB33");
         appDB.addLessons("Друга іноземна мова", "#FF8800");
         appDB.addLessons("Структура і органи ЄС", "#00DDFF");
-        appDB.addLessons("Цивільний захист", "##0000EE");
+        appDB.addLessons("Цивільний захист", "#FF00EE");
         appDB.addLessons("Фінансова політика країн ЄС", "#808080");
         appDB.addLessons("Основи аудиту", "#000000");
     }

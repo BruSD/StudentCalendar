@@ -17,6 +17,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -150,8 +151,9 @@ public class CalendarFragment extends Fragment {
 
                 //new String[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat","Sun" };
 
-        private final String[] months = getActivity().getResources().getStringArray(R.array.month_of_year_array);
-                //{ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+        private final String[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+                //
+                //getActivity().getResources().getStringArray(R.array.month_of_year_array);
         private final int[] daysOfMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30,
                 31, 30, 31 };
         private int daysInMonth;
@@ -334,7 +336,17 @@ public class CalendarFragment extends Fragment {
             gridcell.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    DataStoregCalendar.setSelectedDay(v.getTag().toString());
+                    String tempString = v.getTag().toString();
+
+                    Date date = null;
+                    try {
+                        date = new SimpleDateFormat("d MMMM yyyy", Locale.ENGLISH).parse(tempString);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    SimpleDateFormat formatter = new SimpleDateFormat("d MMMM yyyy");
+                    DataStoregCalendar.setSelectedDay(formatter.format(date));
+
 
                     if (getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
                         DetailDayFragment.changTargetDay();
