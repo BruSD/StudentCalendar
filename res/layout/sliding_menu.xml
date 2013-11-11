@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/sliding_menu_teachers"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/sliding_menu_teachers_text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/teachers"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <View
+            android:layout_height="2dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/sliding_menu_teachers_text"
+            android:background="@color/orrange"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sliding_menu_lessons"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/sliding_menu_lessons_text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/lessons"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <View
+            android:layout_height="2dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/sliding_menu_lessons_text"
+            android:background="@color/orrange"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

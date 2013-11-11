@@ -3,7 +3,7 @@ package brusd.mediummg.StudentCalendar;
 /**
  * Created by BruSD on 05.10.13.
  */
-public class DataStoregCalendar {
+public class DataStorageCalendar {
 
     private static String selectedDay = "";
 

@@ -2,6 +2,12 @@
 <resources>
     <string name="app_name">Дневник Студента</string>
 
+    <!-- Sliding Menu -->
+    <string name="teachers">Преподаватели</string>
+    <string name="lessons">Лекции</string>
+
+    <string name="add_teacher">Добавить преподавателя</string>
+    <string name="add_lesson">Добавить предмет</string>
 
 
 

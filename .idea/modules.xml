@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../SlidingMenu/library/SM.iml" filepath="$PROJECT_DIR$/../SlidingMenu/library/SM.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudentCalendar.iml" filepath="$PROJECT_DIR$/StudentCalendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/../appcompat/appcompat.iml" filepath="$PROJECT_DIR$/../appcompat/appcompat.iml" />
     </modules>

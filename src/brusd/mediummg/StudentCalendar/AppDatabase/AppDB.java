@@ -262,7 +262,6 @@ public class AppDB {
         cursor.close();
         close();
 
-
         return teachers;
     }
 

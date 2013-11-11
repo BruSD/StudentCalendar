@@ -18,13 +18,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
-import java.util.TimeZone;
 
 
 import brusd.mediummg.StudentCalendar.AppDatabase.AppDB;
 import brusd.mediummg.StudentCalendar.AppDatabase.TestData;
-import brusd.mediummg.StudentCalendar.DataStoregCalendar;
+import brusd.mediummg.StudentCalendar.DataStorageCalendar;
 import brusd.mediummg.StudentCalendar.R;
 import brusd.mediummg.StudentCalendar.SetOfAdaptorsStudent.AdapterDetailsDay;
 
@@ -47,9 +45,6 @@ public class DetailDayFragment extends Fragment {
 
         changTargetDay();
 
-
-
-
         return view;
     }
 
@@ -57,18 +52,14 @@ public class DetailDayFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-
-
-
-
     }
 
     public static void changTargetDay(){
-        activity.getSupportActionBar().setTitle(DataStoregCalendar.getSelectedDay());
+        activity.getSupportActionBar().setTitle(DataStorageCalendar.getSelectedDay());
 
         appDB = AppDB.getInstance(activity);
-        new TestData().addingTo(appDB);
-        int dayNumber = getDayOfWeek(DataStoregCalendar.getSelectedDay());
+
+        int dayNumber = getDayOfWeek(DataStorageCalendar.getSelectedDay());
 
 
         listFromDB = appDB.getLessonsFor("Расписание", dayNumber);

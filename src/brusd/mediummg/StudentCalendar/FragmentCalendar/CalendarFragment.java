@@ -28,7 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import brusd.mediummg.StudentCalendar.DataStoregCalendar;
+import brusd.mediummg.StudentCalendar.DataStorageCalendar;
 import brusd.mediummg.StudentCalendar.DayActivity;
 import brusd.mediummg.StudentCalendar.R;
 
@@ -112,10 +112,10 @@ public class CalendarFragment extends Fragment {
     }
 
     private void checkSelectedDay(){
-        if(DataStoregCalendar.getSelectedDay().equals("")){
+        if(DataStorageCalendar.getSelectedDay().equals("")){
             Date date = Calendar.getInstance().getTime();
             SimpleDateFormat formatter = new SimpleDateFormat("d MMMM yyyy");
-            DataStoregCalendar.setSelectedDay(formatter.format(date));
+            DataStorageCalendar.setSelectedDay(formatter.format(date));
         }
     }
     /**
@@ -347,7 +347,7 @@ public class CalendarFragment extends Fragment {
                         e.printStackTrace();
                     }
                     SimpleDateFormat formatter = new SimpleDateFormat("d MMMM yyyy");
-                    DataStoregCalendar.setSelectedDay(formatter.format(date));
+                    DataStorageCalendar.setSelectedDay(formatter.format(date));
 
 
                     if (getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
