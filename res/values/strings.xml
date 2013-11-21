@@ -6,9 +6,17 @@
     <string name="teachers">Преподаватели</string>
     <string name="lessons">Лекции</string>
 
-    <string name="add_teacher">Добавить преподавателя</string>
-    <string name="add_lesson">Добавить предмет</string>
+    <string name="add_teacher_action">Добавить преподавателя</string>
+    <string name="add_lesson_action">Добавить предмет</string>
+    <string name="edit_action">Редактировать</string>
+    <string name="remove_action">Удалить</string>
 
+    <string name="adding_teacher">Добавление преподавателя</string>
+    <string name="adding_lesson">Добавление предмета</string>
+    <string name="editing">Редактирование</string>
+    <string name="removing">Удаление</string>
+
+    <string name="remove_item_text" formatted="false">Вы действительно желаете удалить %s?</string>
 
 
 </resources>

@@ -1,13 +1,17 @@
 package brusd.mediummg.StudentCalendar;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -20,6 +24,9 @@ import java.util.Map;
 
 import brusd.mediummg.StudentCalendar.AppDatabase.AppDB;
 import brusd.mediummg.StudentCalendar.AppDatabase.AppOpenHelper;
+import brusd.mediummg.StudentCalendar.CustomDialogs.LessonDialog;
+import brusd.mediummg.StudentCalendar.CustomDialogs.RemoveDialog;
+import brusd.mediummg.StudentCalendar.CustomDialogs.TeacherDialog;
 
 /**
  * Created with Android Studio.
@@ -30,6 +37,7 @@ import brusd.mediummg.StudentCalendar.AppDatabase.AppOpenHelper;
 public class LessonsActivity extends ActionBarActivity {
 
     private ListView listView;
+    private ArrayList<HashMap<String, Object>> lessons;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +47,9 @@ public class LessonsActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         listView = (ListView)findViewById(R.id.list_layout_listView);
+        registerForContextMenu(listView);
 
-        ((TextView)findViewById(R.id.list_layout_header_textView)).setText(R.string.add_lesson);
+        ((TextView)findViewById(R.id.list_layout_header_textView)).setText(R.string.add_lesson_action);
         findViewById(R.id.list_layout_header_textView).setOnClickListener(new AddTeacherOnClick());
     }
 
@@ -56,8 +65,46 @@ public class LessonsActivity extends ActionBarActivity {
         loadLessonsList();
     }
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        if (v.getId() == R.id.list_layout_listView) {
+
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)menuInfo;
+            menu.setHeaderTitle((String)lessons.get(info.position).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name));
+
+            menu.add(Menu.NONE, 0, 0, getResources().getString(R.string.edit_action));
+            menu.add(Menu.NONE, 1, 1, getResources().getString(R.string.remove_action));
+        }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        int menuItemIndex = item.getItemId();
+        String name = (String)lessons.get(info.position).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name);
+        int color = Color.parseColor((String)lessons.get(info.position).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color));
+
+        switch (menuItemIndex) {
+            case 0: {
+                LessonDialog dialog = new LessonDialog(LessonsActivity.this, LessonDialog.MODE_EDIT, name, color);
+                dialog.setOnDismissListener(new DialogDismiss());
+                dialog.show();
+                break;
+            }
+            case 1: {
+                RemoveDialog dialog = new RemoveDialog(this, RemoveDialog.TYPE_LESSON, name);
+                dialog.setOnDismissListener(new DialogDismiss());
+                dialog.show();
+                break;
+            }
+            default: { break; }
+        }
+
+        return true;
+    }
+
     private void loadLessonsList() {
-        ArrayList<HashMap<String, Object>> lessons = AppDB.getInstance(this).getAllLessons();
+        lessons = AppDB.getInstance(this).getAllLessons();
         LessonsAdapter adapter = new LessonsAdapter(LessonsActivity.this,
                                                     lessons,
                                                     R.layout.lessons_list_item_layout,
@@ -69,7 +116,6 @@ public class LessonsActivity extends ActionBarActivity {
                                             );
         listView.setAdapter(adapter);
     }
-
 
     private class LessonsAdapter extends SimpleAdapter {
 
@@ -163,6 +209,7 @@ public class LessonsActivity extends ActionBarActivity {
                 }
             });
 
+            registerForContextMenu(convertView);
             return convertView;
         }
 
@@ -176,7 +223,22 @@ public class LessonsActivity extends ActionBarActivity {
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(LessonsActivity.this, "Add Lesson", Toast.LENGTH_SHORT).show();
+            LessonDialog dialog = new LessonDialog(LessonsActivity.this, LessonDialog.MODE_NEW, "", 0);
+            dialog.setOnDismissListener(new DialogDismiss());
+            dialog.show();
+        }
+    }
+
+    private class DialogDismiss implements DialogInterface.OnDismissListener {
+        @Override
+        public void onDismiss(DialogInterface dialog) {
+            int index = listView.getFirstVisiblePosition();
+            View v = listView.getChildAt(0);
+            int top = (v == null) ? 0 : v.getTop();
+
+            loadLessonsList();
+
+            listView.setSelectionFromTop(index, top);
         }
     }
 }

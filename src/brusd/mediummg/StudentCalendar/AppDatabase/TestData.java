@@ -20,19 +20,19 @@ public class TestData {
     }
 
     private void addLessonsList(AppDB appDB) {
-        appDB.addLessons("Зовнішня політика України", "#33B5E5");
-        appDB.addLessons("Логістика", "#99CC00");
-        appDB.addLessons("Кредит і банківська справа", "#FF4444");
-        appDB.addLessons("Дипломатичний протокол", "#0099CC");
-        appDB.addLessons("Основна іноземна мова", "#0099CC");
-        appDB.addLessons("Захист інформаційних технологій", "#CC0000");
-        appDB.addLessons("Теорія і практика перекладу", "#AA66CC");
-        appDB.addLessons("Міжнародні економічні відносини", "#FFBB33");
-        appDB.addLessons("Друга іноземна мова", "#FF8800");
-        appDB.addLessons("Структура і органи ЄС", "#00DDFF");
-        appDB.addLessons("Цивільний захист", "#0000EE");
-        appDB.addLessons("Фінансова політика країн ЄС", "#808080");
-        appDB.addLessons("Основи аудиту", "#000000");
+        appDB.addLesson("Зовнішня політика України", "#33B5E5");
+        appDB.addLesson("Логістика", "#99CC00");
+        appDB.addLesson("Кредит і банківська справа", "#FF4444");
+        appDB.addLesson("Дипломатичний протокол", "#0099CC");
+        appDB.addLesson("Основна іноземна мова", "#0099CC");
+        appDB.addLesson("Захист інформаційних технологій", "#CC0000");
+        appDB.addLesson("Теорія і практика перекладу", "#AA66CC");
+        appDB.addLesson("Міжнародні економічні відносини", "#FFBB33");
+        appDB.addLesson("Друга іноземна мова", "#FF8800");
+        appDB.addLesson("Структура і органи ЄС", "#00DDFF");
+        appDB.addLesson("Цивільний захист", "#0000EE");
+        appDB.addLesson("Фінансова політика країн ЄС", "#808080");
+        appDB.addLesson("Основи аудиту", "#000000");
     }
 
     private void addTeacherList(AppDB appDB) {

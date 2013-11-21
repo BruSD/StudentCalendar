@@ -48,6 +48,60 @@ public class AppDB {
         appDB.close();
     }
 
+    private HashMap<Integer, HashMap<String, String>> getAllLessonsAsHashMap() {
+        HashMap<Integer, HashMap<String, String>> result = new HashMap<Integer, HashMap<String, String>>();
+
+        Cursor cursor = appDB.query(AppOpenHelper.TABLE_LESSONS,
+                new String[]{
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson,
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name,
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color},
+                null,
+                null,
+                null,
+                null,
+                AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson);
+
+        while(cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+
+            HashMap<String, String> temp = new HashMap<String, String>();
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, cursor.getString(1).replace("''","'"));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, cursor.getString(2));
+            result.put(id, temp);
+        }
+        cursor.close();
+
+        return result;
+    }
+
+    private HashMap<Integer, String> getAllTeachersAsHashMap() {
+        HashMap<Integer, String> result = new HashMap<Integer, String>();
+
+        Cursor cursor = appDB.query(AppOpenHelper.TABLE_TEACHERS,
+                new String[]{
+                        AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher,
+                        AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name},
+                null,
+                null,
+                null,
+                null,
+                AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher);
+
+        while(cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1).replace("''","'");
+            result.put(id, name);
+        }
+        cursor.close();
+
+        return result;
+    }
+
+
+
+    //region TEACHERS
+
     public void addTeacher(String teacherName) {
 
         if (teacherName == null)
@@ -80,7 +134,90 @@ public class AppDB {
         close();
     }
 
-    public void addLessons(String lessonName, String rgbColor) {
+    public void changeTeacherName(String oldTeacherName, String newTeacherName) {
+        if (oldTeacherName == null || newTeacherName == null)
+            return;
+
+        if (oldTeacherName.isEmpty() || newTeacherName.isEmpty())
+            return;
+
+        if (!appDB.isOpen())
+            open();
+
+        oldTeacherName = oldTeacherName.replace("'","''");
+        newTeacherName = newTeacherName.replace("'","''");
+
+        Cursor check = appDB.query(AppOpenHelper.TABLE_TEACHERS,
+                new String[]{AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name},
+                AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name + " = '" + newTeacherName + "'",
+                null,
+                null,
+                null,
+                null);
+
+        int count = check.getCount();
+        check.close();
+
+        if (count == 0 ) {
+            ContentValues values = new ContentValues();
+            values.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name, newTeacherName);
+
+            appDB.update(AppOpenHelper.TABLE_TEACHERS, values,
+                    AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name + " = '" + oldTeacherName + "'", null);
+        }
+
+        close();
+    }
+
+    public void removeTeacher(String teacherName) {
+        if (teacherName == null)
+            return;
+        if (teacherName.isEmpty())
+            return;
+
+        if (!appDB.isOpen())
+            open();
+
+        teacherName = teacherName.replace("'","''");
+
+        appDB.delete(AppOpenHelper.TABLE_TEACHERS, AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name +" = '" + teacherName + "'", null);
+
+        close();
+    }
+
+    public ArrayList<HashMap<String, Object>> getAllTeachers() {
+        if (!appDB.isOpen())
+            open();
+
+        Cursor cursor = appDB.query(AppOpenHelper.TABLE_TEACHERS,
+                new String[]{
+                        AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher,
+                        AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name},
+                null,
+                null,
+                null,
+                null,
+                AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name);
+
+        ArrayList<HashMap<String, Object>> teachers = new ArrayList<HashMap<String, Object>>();
+        while(cursor.moveToNext()) {
+            HashMap<String, Object> temp = new HashMap<String, Object>();
+            temp.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher, cursor.getInt(0));
+            temp.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name, cursor.getString(1).replace("''","'"));
+            teachers.add(temp);
+        }
+        cursor.close();
+        close();
+
+        return teachers;
+    }
+
+    //endregion
+
+
+    //region LESSONS
+
+    public void addLesson(String lessonName, String rgbColor) {
 
         if (lessonName == null)
             return;
@@ -118,6 +255,151 @@ public class AppDB {
 
         close();
     }
+
+    public ArrayList<HashMap<String, Object>> getLessonsFor(String templateName, int dayOfWeek) {
+        ArrayList<HashMap<String, Object>> result = new ArrayList<HashMap<String, Object>>();
+
+        if (templateName == null)
+            return result;
+        if (templateName.isEmpty())
+            return result;
+
+        if (dayOfWeek < 1 || dayOfWeek > 7)
+            return result;
+
+        if (!appDB.isOpen())
+            open();
+
+        templateName = templateName.replace("'","''");
+
+        HashMap<Integer, String> teachers = getAllTeachersAsHashMap();
+        HashMap<Integer, HashMap<String, String>> lessons = getAllLessonsAsHashMap();
+
+        Cursor cursor = appDB.query(AppOpenHelper.TABLE_TEMPLATES,
+                new String[]{AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number,
+                        AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time,
+                        AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time,
+                        AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Name_ID,
+                        AppOpenHelper.TABLE_TEMPLATES_COLUMN_Teacher_Name_ID},
+                AppOpenHelper.TABLE_TEMPLATES_COLUMN_Template_Name + " = '" + templateName + "' AND " +
+                        AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day + "  = '" + dayOfWeek + "'",
+                null,
+                null,
+                null,
+                AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number);
+
+        while(cursor.moveToNext()) {
+            HashMap<String, Object> temp = new HashMap<String, Object>();
+            temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, cursor.getInt(0));
+            temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, cursor.getString(1));
+            temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, cursor.getString(2));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, lessons.get(cursor.getInt(3)).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, lessons.get(cursor.getInt(3)).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color));
+            temp.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name, teachers.get(cursor.getInt(4)));
+            result.add(temp);
+        }
+
+        cursor.close();
+        close();
+
+        return result;
+    }
+
+    public void removeLesson(String lessonName) {
+        if (lessonName == null)
+            return;
+        if (lessonName.isEmpty())
+            return;
+
+        if (!appDB.isOpen())
+            open();
+
+        lessonName = lessonName.replace("'","''");
+
+        appDB.delete(AppOpenHelper.TABLE_LESSONS, AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name +" = '" + lessonName + "'", null);
+
+        close();
+    }
+
+    public void changeLesson(String oldLessonName, String newLessonName, String newColor) {
+        if (oldLessonName == null)
+            return;
+        if (oldLessonName.isEmpty())
+            return;
+
+        if (newLessonName == null)
+            return;
+        if (newLessonName.isEmpty())
+            return;
+
+        if (newColor == null)
+            newColor = "#FFFFFF";
+
+        if (newColor.isEmpty())
+            newColor = "#FFFFFF";
+
+        if (!appDB.isOpen())
+            open();
+
+        oldLessonName = oldLessonName.replace("'","''");
+        newLessonName = newLessonName.replace("'","''");
+
+        Cursor check = appDB.query(AppOpenHelper.TABLE_LESSONS,
+                new String[]{AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name},
+                AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name + " = '" + newLessonName + "'",
+                null,
+                null,
+                null,
+                null);
+
+        int count = check.getCount();
+        check.close();
+
+        if (count == 0 ) {
+            ContentValues values = new ContentValues();
+            values.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, newLessonName);
+            values.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, newColor);
+
+            appDB.update(AppOpenHelper.TABLE_LESSONS, values,
+                    AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name + " = '" + oldLessonName + "'", null);
+        }
+
+        close();
+    }
+
+    public ArrayList<HashMap<String, Object>> getAllLessons() {
+        if (!appDB.isOpen())
+            open();
+
+        Cursor cursor = appDB.query(AppOpenHelper.TABLE_LESSONS,
+                new String[]{
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson,
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name,
+                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color},
+                null,
+                null,
+                null,
+                null,
+                AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name);
+
+        ArrayList<HashMap<String, Object>> lessons = new ArrayList<HashMap<String, Object>>();
+        while(cursor.moveToNext()) {
+            HashMap<String, Object> temp = new HashMap<String, Object>();
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson, cursor.getInt(0));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, cursor.getString(1).replace("''", "'"));
+            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, cursor.getString(2));
+            lessons.add(temp);
+        }
+        cursor.close();
+        close();
+
+        return lessons;
+    }
+
+    //endregion
+
+
+    //region TEMPLATES
 
     public void addTemplates(String templateName, ArrayList<HashMap<String, Object>> lessons) {
 
@@ -209,160 +491,10 @@ public class AppDB {
         close();
     }
 
-    public ArrayList<HashMap<String, Object>> getAllLessons() {
-        if (!appDB.isOpen())
-            open();
+    //endregion
 
-        Cursor cursor = appDB.query(AppOpenHelper.TABLE_LESSONS,
-                new String[]{
-                        AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson,
-                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name,
-                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color},
-                null,
-                null,
-                null,
-                null,
-                AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name);
 
-        ArrayList<HashMap<String, Object>> lessons = new ArrayList<HashMap<String, Object>>();
-        while(cursor.moveToNext()) {
-            HashMap<String, Object> temp = new HashMap<String, Object>();
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson, cursor.getInt(0));
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, cursor.getString(1));
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, cursor.getString(2));
-            lessons.add(temp);
-        }
-        cursor.close();
-        close();
 
-        return lessons;
-    }
-
-    public ArrayList<HashMap<String, Object>> getAllTeachers() {
-        if (!appDB.isOpen())
-            open();
-
-        Cursor cursor = appDB.query(AppOpenHelper.TABLE_TEACHERS,
-                new String[]{
-                        AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher,
-                        AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name},
-                null,
-                null,
-                null,
-                null,
-                AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name);
-
-        ArrayList<HashMap<String, Object>> teachers = new ArrayList<HashMap<String, Object>>();
-        while(cursor.moveToNext()) {
-            HashMap<String, Object> temp = new HashMap<String, Object>();
-            temp.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher, cursor.getInt(0));
-            temp.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name, cursor.getString(1));
-            teachers.add(temp);
-        }
-        cursor.close();
-        close();
-
-        return teachers;
-    }
-
-    public ArrayList<HashMap<String, Object>> getLessonsFor(String templateName, int dayOfWeek) {
-        ArrayList<HashMap<String, Object>> result = new ArrayList<HashMap<String, Object>>();
-
-        if (templateName == null)
-            return result;
-        if (templateName.isEmpty())
-            return result;
-
-        if (dayOfWeek < 1 || dayOfWeek > 7)
-            return result;
-
-        if (!appDB.isOpen())
-            open();
-
-        templateName = templateName.replace("'","''");
-
-        HashMap<Integer, String> teachers = getAllTeachersAsHashMap();
-        HashMap<Integer, HashMap<String, String>> lessons = getAllLessonsAsHashMap();
-
-        Cursor cursor = appDB.query(AppOpenHelper.TABLE_TEMPLATES,
-                new String[]{AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number,
-                            AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time,
-                            AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time,
-                            AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Name_ID,
-                            AppOpenHelper.TABLE_TEMPLATES_COLUMN_Teacher_Name_ID},
-                AppOpenHelper.TABLE_TEMPLATES_COLUMN_Template_Name + " = '" + templateName + "' AND " +
-                AppOpenHelper.TABLE_TEMPLATES_COLUMN_Week_Day + "  = '" + dayOfWeek + "'",
-                null,
-                null,
-                null,
-                AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number);
-
-        while(cursor.moveToNext()) {
-            HashMap<String, Object> temp = new HashMap<String, Object>();
-            temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Lesson_Number, cursor.getInt(0));
-            temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_Start_Time, cursor.getString(1));
-            temp.put(AppOpenHelper.TABLE_TEMPLATES_COLUMN_End_Time, cursor.getString(2));
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, lessons.get(cursor.getInt(3)).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name));
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, lessons.get(cursor.getInt(3)).get(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color));
-            temp.put(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name, teachers.get(cursor.getInt(4)));
-            result.add(temp);
-        }
-
-        cursor.close();
-        close();
-
-        return result;
-    }
-
-    private HashMap<Integer, HashMap<String, String>> getAllLessonsAsHashMap() {
-        HashMap<Integer, HashMap<String, String>> result = new HashMap<Integer, HashMap<String, String>>();
-
-        Cursor cursor = appDB.query(AppOpenHelper.TABLE_LESSONS,
-                new String[]{
-                        AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson,
-                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name,
-                        AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color},
-                null,
-                null,
-                null,
-                null,
-                AppOpenHelper.TABLE_LESSONS_COLUMN_ID_Lesson);
-
-        while(cursor.moveToNext()) {
-            int id = cursor.getInt(0);
-
-            HashMap<String, String> temp = new HashMap<String, String>();
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Name, cursor.getString(1));
-            temp.put(AppOpenHelper.TABLE_LESSONS_COLUMN_Lesson_Color, cursor.getString(2));
-            result.put(id, temp);
-        }
-        cursor.close();
-
-        return result;
-    }
-
-    private HashMap<Integer, String> getAllTeachersAsHashMap() {
-        HashMap<Integer, String> result = new HashMap<Integer, String>();
-
-        Cursor cursor = appDB.query(AppOpenHelper.TABLE_TEACHERS,
-                new String[]{
-                        AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher,
-                        AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name},
-                null,
-                null,
-                null,
-                null,
-                AppOpenHelper.TABLE_TEACHERS_COLUMN_ID_Teacher);
-
-        while(cursor.moveToNext()) {
-            int id = cursor.getInt(0);
-            String name = cursor.getString(1);
-            result.put(id, name);
-        }
-        cursor.close();
-
-        return result;
-    }
 
 
 }

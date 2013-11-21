@@ -1,12 +1,16 @@
 package brusd.mediummg.StudentCalendar;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -19,6 +23,8 @@ import java.util.Map;
 
 import brusd.mediummg.StudentCalendar.AppDatabase.AppDB;
 import brusd.mediummg.StudentCalendar.AppDatabase.AppOpenHelper;
+import brusd.mediummg.StudentCalendar.CustomDialogs.RemoveDialog;
+import brusd.mediummg.StudentCalendar.CustomDialogs.TeacherDialog;
 
 /**
  * Created with Android Studio.
@@ -29,6 +35,7 @@ import brusd.mediummg.StudentCalendar.AppDatabase.AppOpenHelper;
 public class TeachersActivity extends ActionBarActivity {
 
     private ListView listView;
+    private ArrayList<HashMap<String, Object>> teachers;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +46,9 @@ public class TeachersActivity extends ActionBarActivity {
 
         listView = (ListView)findViewById(R.id.list_layout_listView);
         listView.setDividerHeight(0);
+        registerForContextMenu(listView);
 
-        ((TextView)findViewById(R.id.list_layout_header_textView)).setText(R.string.add_teacher);
+        ((TextView)findViewById(R.id.list_layout_header_textView)).setText(R.string.add_teacher_action);
         findViewById(R.id.list_layout_header_textView).setOnClickListener(new AddTeacherOnClick());
     }
 
@@ -56,8 +64,47 @@ public class TeachersActivity extends ActionBarActivity {
         loadTeachersList();
     }
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        if (v.getId() == R.id.list_layout_listView) {
+
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)menuInfo;
+            menu.setHeaderTitle((String)teachers.get(info.position).get(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name));
+
+            menu.add(Menu.NONE, 0, 0, getResources().getString(R.string.edit_action));
+            menu.add(Menu.NONE, 1, 1, getResources().getString(R.string.remove_action));
+        }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        int menuItemIndex = item.getItemId();
+        String name = (String)teachers.get(info.position).get(AppOpenHelper.TABLE_TEACHERS_COLUMN_Teacher_Name);
+
+        switch (menuItemIndex) {
+            case 0: {
+                TeacherDialog dialog = new TeacherDialog(this, TeacherDialog.MODE_EDIT, name);
+                dialog.setOnDismissListener(new DialogDismiss());
+                dialog.show();
+                break;
+            }
+            case 1: {
+                RemoveDialog dialog = new RemoveDialog(this, RemoveDialog.TYPE_TEACHER, name);
+                dialog.setOnDismissListener(new DialogDismiss());
+                dialog.show();
+                break;
+            }
+            default:{}
+        }
+
+        return true;
+    }
+
+
+
     private void loadTeachersList() {
-        ArrayList<HashMap<String, Object>> teachers = AppDB.getInstance(this).getAllTeachers();
+        teachers = AppDB.getInstance(this).getAllTeachers();
         TeachersAdapter adapter = new TeachersAdapter(TeachersActivity.this,
                                                     teachers,
                                                     R.layout.teacher_list_item_layout,
@@ -161,13 +208,7 @@ public class TeachersActivity extends ActionBarActivity {
             holder.textView.setTag(data.get(position).get(from[0]));
             holder.textView.setText((String) data.get(position).get(from[1]));
 
-            convertView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(TeachersActivity.this, String.valueOf(holder.textView.getTag()), Toast.LENGTH_SHORT).show();
-                }
-            });
-
+            registerForContextMenu(convertView);
             return convertView;
         }
 
@@ -178,68 +219,27 @@ public class TeachersActivity extends ActionBarActivity {
     }
 
     private class AddTeacherOnClick implements View.OnClickListener {
-
         @Override
         public void onClick(View v) {
-            Toast.makeText(TeachersActivity.this, "Add Teacher", Toast.LENGTH_SHORT).show();
+            TeacherDialog dialog = new TeacherDialog(TeachersActivity.this, TeacherDialog.MODE_NEW, "");
+            dialog.setOnDismissListener(new DialogDismiss());
+            dialog.show();
+        }
+    }
+
+    private class DialogDismiss implements DialogInterface.OnDismissListener {
+        @Override
+        public void onDismiss(DialogInterface dialog) {
+            int index = listView.getFirstVisiblePosition();
+            View v = listView.getChildAt(0);
+            int top = (v == null) ? 0 : v.getTop();
+
+            loadTeachersList();
+
+            listView.setSelectionFromTop(index, top);
         }
     }
 
 
 
-
-    /*
-
-    private class SwipeTeacher implements View.OnTouchListener{
-
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            return new GestureDetector(TeachersActivity.this, new GestureListener(v)).onTouchEvent(event);
-        }
-    }
-
-    private class GestureListener implements GestureDetector.OnGestureListener {
-
-        private View view;
-
-        private GestureListener(View v) {
-            super();
-            this.view = v;
-        }
-
-        @Override
-        public boolean onDown(MotionEvent e) {
-            return true;
-        }
-
-        @Override
-        public void onShowPress(MotionEvent e) {
-
-        }
-
-        @Override
-        public boolean onSingleTapUp(MotionEvent e) {
-            return false;
-        }
-
-        @Override
-        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-            //Log.v("onScroll", String.valueOf(view.getTag()));
-            //Toast.makeText(TeachersActivity.this, String.valueOf(view.getTag()), Toast.LENGTH_LONG).show();
-            return true;
-        }
-
-        @Override
-        public void onLongPress(MotionEvent e) {
-
-        }
-
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            Log.v("onFling", String.valueOf(view.getTag()));
-            return false;
-        }
-    }
-
-    */
 }
