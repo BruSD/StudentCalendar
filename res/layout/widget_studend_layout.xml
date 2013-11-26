@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin"
+    android:background="@drawable/widget_background_conteiner"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/widget_head_backgraund">
+
+        <ImageButton
+            android:id="@+id/prev_day_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:src="@drawable/navigation_previous_item"
+            android:background="@drawable/button_backgraund_widget_dark_blue"
+            />
+
+        <TextView
+            android:id="@+id/selected_day_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/next_day_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:src="@drawable/navigation_next_item"
+            android:background="@drawable/button_backgraund_widget_dark_blue"/>
+
+        </LinearLayout>
+     <ListView
+         android:id="@+id/list_studend_widget"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+
+</LinearLayout>

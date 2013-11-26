@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidConfiguredLogFilters">
-    <filters>
-      <filter>
-        <option name="logLevel" value="verbose" />
-        <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="" />
-        <option name="name" value="STUD" />
-        <option name="packageNamePattern" value="brusd.mediummg.StudentCalendar" />
-        <option name="pid" value="" />
-      </filter>
-    </filters>
-  </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState />
@@ -40,7 +28,7 @@
       <layout url="file://$PROJECT_DIR$/res/layout/item_detail_days.xml">
         <config>
           <device>Nexus 4</device>
-          <theme>@android:style/Theme.DeviceDefault.Light</theme>
+          <theme>@android:style/Theme.Holo.Light.Dialog.NoActionBar</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/main.xml">
@@ -55,14 +43,46 @@
           <theme>@android:style/Theme.Holo.Dialog.NoActionBar</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/widget_studend_layout.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@android:style/Theme.Holo.Light</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="STUD" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a805832-6e4d-4d62-b045-f7823cee54ff" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/navigation_next_item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/navigation_next_item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xdpi/navigation_next_item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/navigation_previous_item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/navigation_previous_item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xdpi/navigation_previous_item.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetConfigureActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml/appwidget_provider.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/attrs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-v11/attrs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/button_backgraund_widget_dark_blue.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/button_shape_presed.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/button_shape_unpresed.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-v14/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_widget_list_layot.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/widget_background_conteiner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/widget_head_backgraund.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/widget_studend_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStorageCalendar.java" afterPath="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStorageCalendar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="H:\ProgressDevelopment\StudentCalendar\Student\res\drawable-ldpi\ic_launcher.png" afterPath="$PROJECT_DIR$/res/drawable-xdpi/ic_launcher.png" />
+      <change type="MOVED" beforePath="H:\ProgressDevelopment\StudentCalendar\Student\res\drawable-ldpi\icon.png" afterPath="$PROJECT_DIR$/res/drawable-xdpi/icon.png" />
     </list>
     <ignored path="StudentCalendar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,8 +115,8 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -112,13 +132,13 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/LessonDialog.java" line="130" class="brusd.mediummg.StudentCalendar.CustomDialogs.LessonDialog.CancelOnClick" package="brusd.mediummg.StudentCalendar.CustomDialogs">
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java" line="341" class="brusd.mediummg.StudentCalendar.FragmentCalendar.CalendarFragment.GridCellAdapter$1" package="brusd.mediummg.StudentCalendar.FragmentCalendar">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -133,7 +153,82 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/LessonDialog.java" line="96" class="brusd.mediummg.StudentCalendar.CustomDialogs.LessonDialog" package="brusd.mediummg.StudentCalendar.CustomDialogs">
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java" line="352" class="brusd.mediummg.StudentCalendar.FragmentCalendar.CalendarFragment.GridCellAdapter$1" package="brusd.mediummg.StudentCalendar.FragmentCalendar">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java" line="348" class="brusd.mediummg.StudentCalendar.FragmentCalendar.CalendarFragment.GridCellAdapter$1" package="brusd.mediummg.StudentCalendar.FragmentCalendar">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java" line="342" class="brusd.mediummg.StudentCalendar.FragmentCalendar.CalendarFragment.GridCellAdapter$1" package="brusd.mediummg.StudentCalendar.FragmentCalendar">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetService.java" line="58" class="brusd.mediummg.StudentCalendar.WidgetStudEND.StudEndWidgetService.PairListRemoteViewsFactory" package="brusd.mediummg.StudentCalendar.WidgetStudEND">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java" line="33" class="brusd.mediummg.StudentCalendar.WidgetStudEND.StudEndWidgetProvider" package="brusd.mediummg.StudentCalendar.WidgetStudEND">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetService.java" line="55" class="brusd.mediummg.StudentCalendar.WidgetStudEND.StudEndWidgetService.PairListRemoteViewsFactory" package="brusd.mediummg.StudentCalendar.WidgetStudEND">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -158,37 +253,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppDB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java">
+      <file leaf-file-name="StudEndWidgetProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="366" column="16" selection-start="12211" selection-end="12211" vertical-scroll-proportion="0.0" vertical-offset="6222" max-vertical-offset="8602">
+            <state line="64" column="34" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1513">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MonthActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java">
+      <file leaf-file-name="widget_studend_layout.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/widget_studend_layout.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="8" selection-start="2114" selection-end="2114" vertical-scroll-proportion="-0.635514" vertical-offset="969" max-vertical-offset="1581">
+            <state line="21" column="69" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="867">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudEndWidgetService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="138" column="1" selection-start="4095" selection-end="4244" vertical-scroll-proportion="0.0" vertical-offset="2346" max-vertical-offset="2465">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LessonsActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/LessonsActivity.java">
+      <file leaf-file-name="DataStorageCalendar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStorageCalendar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="46" selection-start="3498" selection-end="3498" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="4233">
+            <state line="7" column="37" selection-start="144" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LessonDialog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/LessonDialog.java">
+      <file leaf-file-name="CalendarFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="26" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.0" vertical-offset="1756" max-vertical-offset="3060">
+            <state line="145" column="52" selection-start="4420" selection-end="4431" vertical-scroll-proportion="-1.9678457" vertical-offset="2465" max-vertical-offset="6392">
               <folding />
             </state>
           </provider>
@@ -200,6 +307,10 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="D:\Dewelopment\Student Calendar\KeyStore\studentkey.jks" />
+    <option name="KEY_ALIAS" value="StudentCalendar" />
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -214,45 +325,49 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStoregCalendar.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStorageCalendar.java" />
-        <option value="$PROJECT_DIR$/res/layout/lessons_layout.xml" />
-        <option value="$PROJECT_DIR$/res/layout/simple_list_item_layout.xml" />
-        <option value="$PROJECT_DIR$/res/layout/simple_list_header_layout.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/teacher_list_item_layout.xml" />
-        <option value="$PROJECT_DIR$/res/layout/lessons_list_item_layout.xml" />
+        <option value="$PROJECT_DIR$/res/values/string_array.xml" />
+        <option value="$PROJECT_DIR$/res/layout-land/main.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AuthMethods/AbstractAsincTaskGetGoogleUserInfo.java" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AuthMethods/AsincTaskGetGoogleUserInfo.java" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_datail_day.xml" />
+        <option value="$PROJECT_DIR$/res/layout/item_detail_days.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/SetOfAdaptorsStudent/AdapterDetailsDay.java" />
         <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java" />
         <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/DetailDayFragment.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/SetOfAdaptorsStudent/BounceListView.java" />
-        <option value="$PROJECT_DIR$/res/layout/list_layout.xml" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/BounceListView.java" />
-        <option value="$PROJECT_DIR$/res/layout/edit_teacher_layout.xml" />
-        <option value="$PROJECT_DIR$/res/values/array.xml" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/EditTeacherDialog.java" />
-        <option value="$PROJECT_DIR$/res/layout/teacher_dialog_layout.xml" />
-        <option value="$PROJECT_DIR$/res/layout/remove_dialog.xml" />
-        <option value="$PROJECT_DIR$/res/layout/remove_dialog_layout.xml" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/RemoveDialog.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/TeachersActivity.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/OnColorChangedListener.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/LessonsDialog.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/ColorPickerView.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/lesson_dialog_layout.xml" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/LessonsActivity.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/TeacherDialog.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/LessonDialog.java" />
-        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/SetOfAdaptorsStudent/DayActivity.java" />
         <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_detail_layout.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStoregCalendar.java" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DayActivity.java" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetConfigure.java" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetConfigureActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/res/values-v14/dimens.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/MyWidgetService.java" />
+        <option value="$PROJECT_DIR$/res/values/attrs.xml" />
+        <option value="$PROJECT_DIR$/res/values-v11/attrs.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStorageCalendar.java" />
+        <option value="$PROJECT_DIR$/res/xml/appwidget_provider.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetService.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/widget_background_layout.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/widget_head_backgraund.xml" />
+        <option value="$PROJECT_DIR$/res/layout/item_widget_list_layot.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/button_shape_unpresed.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/button_shape_presed.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/prev_button_backgraund_widget.xml" />
+        <option value="$PROJECT_DIR$/res/layout/widget_studend_layout.xml" />
+        <option value="$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="22" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -280,17 +395,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="StudentCalendar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -299,7 +409,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudentCalendar" />
+              <option name="myItemId" value="Student" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -309,7 +419,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudentCalendar" />
+              <option name="myItemId" value="Student" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -327,15 +437,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="StudentCalendar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
+              <option name="myItemId" value="SetOfAdaptorsStudent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,7 +459,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="StudentCalendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FragmentCalendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudentCalendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudentCalendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomDialogs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudentCalendar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Student" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -357,10 +515,23 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="StudentCalendar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -377,22 +548,19 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4df162a60b876f33" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="LGOTMSc622757b" />
+    <property name="ExportedModule" value="StudentCalendar" />
+    <property name="ExportedApkPath" value="H:\ProgressDevelopment\StudentCalendar\Student\StudentCalendar.apk" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus4" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Work\_AndroidStudioProjects\StudCalendar\StudentCalendar\src\brusd\mediummg\StudentCalendar\AppDatabase" />
+      <recent name="H:\ProgressDevelopment\StudentCalendar\Student\res\values-v11" />
+      <recent name="H:\ProgressDevelopment\StudentCalendar\Student\res\values-v14" />
       <recent name="H:\ProgressDevelopment\StudentCalendar\Student\res\layout-land" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="brusd.mediummg.StudentCalendar" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Work\_AndroidStudioProjects\StudCalendar\StudentCalendar\res\layout" />
-      <recent name="D:\Work\_AndroidStudioProjects\StudCalendar\StudentCalendar\res\menu" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.StudentCalendar">
@@ -579,88 +747,96 @@
       <created>1380749191744</created>
       <updated>1380749191744</updated>
     </task>
-    <task id="LOCAL-00002" summary="DB and test data">
-      <created>1383294390126</created>
-      <updated>1383294390126</updated>
+    <task id="LOCAL-00002" summary="-Adapt Calendar">
+      <created>1380873059340</created>
+      <updated>1380873059340</updated>
     </task>
-    <task id="LOCAL-00003" summary="select for template name and day of week">
-      <created>1383734792166</created>
-      <updated>1383734792166</updated>
+    <task id="LOCAL-00003" summary="-First day is a monday">
+      <created>1381172739102</created>
+      <updated>1381172739102</updated>
     </task>
-    <task id="LOCAL-00004" summary="color fix">
-      <created>1383735929718</created>
-      <updated>1383735929718</updated>
+    <task id="LOCAL-00004" summary="-Day set On Click and chang day in Action Bar">
+      <created>1381178804328</created>
+      <updated>1381178804328</updated>
     </task>
-    <task id="LOCAL-00005" summary="sliding menu + lessons, teachers activity">
-      <created>1384191041839</created>
-      <updated>1384191041839</updated>
+    <task id="LOCAL-00005" summary="-String Array for day in week, month in Russian">
+      <created>1381265685852</created>
+      <updated>1381265685852</updated>
     </task>
-    <task id="LOCAL-00006" summary="teacher, lessons: adding, editing, removing">
-      <created>1385050489003</created>
-      <updated>1385050489003</updated>
+    <task id="LOCAL-00006" summary="-Add Action Bar&#10;-Chench Suport version to 2.3.3">
+      <created>1383292325026</created>
+      <updated>1383292325026</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="-Show pair to each day">
+      <created>1383751051353</created>
+      <updated>1383751051353</updated>
+    </task>
+    <task id="LOCAL-00008" summary="-Added Portrat Activity for List of pair&#10;- UpDate currently version code">
+      <created>1383764356682</created>
+      <updated>1383764356682</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22920203" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17147708" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597622" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43293718" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6026345" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39823982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4632272" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5115258" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24621212" sideWeight="0.9847199" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3786078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="122" width="1736" height="866" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20277481" sideWeight="0.7150838" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2766191" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="122" width="1736" height="866" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22878788" sideWeight="0.5178268" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37980768" sideWeight="0.74748605" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="122" width="1736" height="866" />
+      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="122" width="1736" height="866" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17546849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2579583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2439394" sideWeight="0.9847199" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21237993" sideWeight="0.7150838" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2350937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17821783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35075757" sideWeight="0.5178268" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29812607" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37126067" sideWeight="0.74748605" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39823982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.112436116" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48734874" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -678,341 +854,392 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="-Base Calendar" />
-    <MESSAGE value="DB and test data" />
-    <MESSAGE value="select for template name and day of week" />
-    <MESSAGE value="color fix" />
-    <MESSAGE value="sliding menu + lessons, teachers activity" />
-    <MESSAGE value="teacher, lessons: adding, editing, removing" />
-    <option name="LAST_COMMIT_MESSAGE" value="teacher, lessons: adding, editing, removing" />
+    <MESSAGE value="-Adapt Calendar" />
+    <MESSAGE value="-First day is a monday" />
+    <MESSAGE value="-Day set On Click and chang day in Action Bar" />
+    <MESSAGE value="-String Array for day in week, month in Russian" />
+    <MESSAGE value="-Add Action Bar&#10;-Chench Suport version to 2.3.3" />
+    <MESSAGE value="-Show pair to each day" />
+    <MESSAGE value="-Added Portrat Activity for List of pair&#10;- UpDate currently version code" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Added Portrat Activity for List of pair&#10;- UpDate currently version code" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java">
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="19" selection-start="4214" selection-end="4214" vertical-scroll-proportion="0.0" vertical-offset="2329" max-vertical-offset="7242">
+        <state line="80" column="27" selection-start="2663" selection-end="2663" vertical-scroll-proportion="0.0" vertical-offset="926" max-vertical-offset="1853">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppOpenHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="2072" selection-end="2086" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2193" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/LessonsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="70" selection-start="7742" selection-end="7742" vertical-scroll-proportion="0.0" vertical-offset="3213" max-vertical-offset="3910">
+        <state line="145" column="52" selection-start="4420" selection-end="4431" vertical-scroll-proportion="0.0" vertical-offset="2465" max-vertical-offset="7191">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list_layout.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/widget_studend_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/appwidget_provider.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="50" selection-start="1105" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="731">
+        <state line="11" column="21" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetConfigureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="52" selection-start="8" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="60" selection-start="184" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/widget_studend_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="19" selection-start="4214" selection-end="4214" vertical-scroll-proportion="0.0" vertical-offset="2329" max-vertical-offset="7242">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="2072" selection-end="2086" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2193" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/LessonsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="70" selection-start="7742" selection-end="7742" vertical-scroll-proportion="0.0" vertical-offset="1921" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/appwidget_provider.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="50" selection-start="1105" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="731">
+        <state line="11" column="21" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetConfigureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="52" selection-start="8" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="60" selection-start="184" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/widget_studend_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="46" selection-start="4571" selection-end="4571" vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="2312">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="2072" selection-end="2086" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2193" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/LessonsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="69" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="3179">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_detail_days.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/appwidget_provider.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="331" selection-end="343" vertical-scroll-proportion="0.32380953" vertical-offset="0" max-vertical-offset="731" />
+        <state line="11" column="21" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/teacher_list_item_layout.xml">
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetConfigureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="52" selection-start="8" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="60" selection-start="184" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/widget_studend_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="33" selection-start="354" selection-end="354" vertical-scroll-proportion="0.31598514" vertical-offset="0" max-vertical-offset="538" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/DetailDayFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="1173" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="310" selection-end="310" vertical-scroll-proportion="0.2771739" vertical-offset="0" max-vertical-offset="765">
+        <state line="25" column="17" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="765">
+          <folding>
+            <element signature="e#626#644#0" expanded="true" />
+            <element signature="e#763#781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="26" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="1853">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/widget/ListView.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="41" selection-start="2337" selection-end="2348" vertical-scroll-proportion="-4.56" vertical-offset="396" max-vertical-offset="61846" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/view/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="20" selection-start="5798" selection-end="5798" vertical-scroll-proportion="0.5800971" vertical-offset="2328" max-vertical-offset="7429" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2855" column="16" selection-start="122159" selection-end="122159" vertical-scroll-proportion="0.33240223" vertical-offset="46733" max-vertical-offset="88247" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/view/ContextMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="21" selection-start="3368" selection-end="3368" vertical-scroll-proportion="0.3516949" vertical-offset="1243" max-vertical-offset="1479" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/content/DialogInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="14" selection-start="3161" selection-end="3161" vertical-scroll-proportion="0.33252427" vertical-offset="1512" max-vertical-offset="2550" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/app/AlertDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="13" selection-start="2456" selection-end="2456" vertical-scroll-proportion="-10.145015" vertical-offset="3902" max-vertical-offset="15181" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/database/sqlite/SQLiteDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1506" column="20" selection-start="66390" selection-end="66396" vertical-scroll-proportion="-1.0543807" vertical-offset="25186" max-vertical-offset="36465" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/view/inputmethod/InputMethodManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="839" column="28" selection-start="31823" selection-end="31823" vertical-scroll-proportion="2.393531" vertical-offset="12389" max-vertical-offset="32317" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="2072" selection-end="2086" vertical-scroll-proportion="-0.09550562" vertical-offset="782" max-vertical-offset="2159" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lessons_list_item_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="464" selection-end="464" vertical-scroll-proportion="0.47397768" vertical-offset="0" max-vertical-offset="538">
-          <folding />
+        <state line="25" column="17" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="765">
+          <folding>
+            <element signature="e#626#644#0" expanded="true" />
+            <element signature="e#763#781#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/remove_dialog_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="582" selection-end="582" vertical-scroll-proportion="0.07809111" vertical-offset="219" max-vertical-offset="680">
-          <folding />
+        <state line="25" column="23" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="612">
+          <folding>
+            <element signature="e#626#644#0" expanded="true" />
+            <element signature="e#763#781#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/OnColorChangedListener.java">
+    <entry file="file://$PROJECT_DIR$/res/values/styles_calendar_events.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="31" selection-start="90" selection-end="90" vertical-scroll-proportion="0.10493827" vertical-offset="0" max-vertical-offset="486" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/teacher_dialog_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="472" selection-end="1127" vertical-scroll-proportion="-6.12" vertical-offset="102" max-vertical-offset="646">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="766" selection-end="766" vertical-scroll-proportion="0.62407863" vertical-offset="52" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/content/res/Resources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="518" column="17" selection-start="21696" selection-end="21696" vertical-scroll-proportion="0.33333334" vertical-offset="8004" max-vertical-offset="37536" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/app/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="504" column="9" selection-start="16816" selection-end="16816" vertical-scroll-proportion="0.0" vertical-offset="6916" max-vertical-offset="20060" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/view/ViewGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3209" column="41" selection-start="119813" selection-end="119819" vertical-scroll-proportion="0.7331081" vertical-offset="53418" max-vertical-offset="107389" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="278" selection-end="278" vertical-scroll-proportion="0.34304208" vertical-offset="81" max-vertical-offset="4250" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10012" column="61" selection-start="387721" selection-end="387750" vertical-scroll-proportion="0.3319672" vertical-offset="167233" max-vertical-offset="309026">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/graphics/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="22" selection-start="6392" selection-end="6392" vertical-scroll-proportion="0.3317757" vertical-offset="3037" max-vertical-offset="6375" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/graphics/Paint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="8" selection-start="6717" selection-end="6717" vertical-scroll-proportion="0.36599424" vertical-offset="3681" max-vertical-offset="37706" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/array.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="19" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="731">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6227273" vertical-offset="274" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lesson_dialog_layout.xml">
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/util/Calendar.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="37" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.42994243" vertical-offset="235" max-vertical-offset="2703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_detail_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="86" selection-start="312" selection-end="312" vertical-scroll-proportion="0.13556619" vertical-offset="0" max-vertical-offset="627">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.47204968" vertical-offset="18" max-vertical-offset="476">
-          <folding>
-            <element signature="tag#RelativeLayout#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="476">
+        <state line="10" column="47" selection-start="271" selection-end="489" vertical-scroll-proportion="0.27113238" vertical-offset="0" max-vertical-offset="627">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/TeachersActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="56" selection-start="3049" selection-end="3062" vertical-scroll-proportion="0.28277636" vertical-offset="621" max-vertical-offset="1326">
-          <folding>
-            <element signature="method#onCreate#0;class#TeachersActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#TeachersActivity#0" expanded="false" />
-            <element signature="method#onStart#0;class#TeachersActivity#0" expanded="false" />
-            <element signature="method#loadTeachersList#0;class#TeachersActivity#0" expanded="false" />
-            <element signature="class#TeachersAdapter#0;class#TeachersActivity#0" expanded="false" />
-            <element signature="class#AddTeacherOnClick#0;class#TeachersActivity#0" expanded="false" />
-            <element signature="class#DialogDismiss#0;class#TeachersActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/ColorPickerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="319" selection-end="319" vertical-scroll-proportion="-0.655527" vertical-offset="408" max-vertical-offset="2635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/RemoveDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="748" selection-end="748" vertical-scroll-proportion="-1.6558442" vertical-offset="901" max-vertical-offset="1462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/TeacherDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="66" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.14285715" vertical-offset="908" max-vertical-offset="1683" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/LessonsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="46" selection-start="3498" selection-end="3498" vertical-scroll-proportion="0.0" vertical-offset="583" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/CustomDialogs/LessonDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="26" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.0" vertical-offset="1756" max-vertical-offset="3060">
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/AppDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="366" column="16" selection-start="12211" selection-end="12211" vertical-scroll-proportion="0.0" vertical-offset="6222" max-vertical-offset="8602">
+        <state line="325" column="21" selection-start="12211" selection-end="12211" vertical-scroll-proportion="-0.18979266" vertical-offset="5525" max-vertical-offset="6256" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/AppDatabase/TestData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="49" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-0.027113238" vertical-offset="544" max-vertical-offset="4182" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.05954466" vertical-offset="0" max-vertical-offset="571" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-v14/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="33" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="43" selection-start="94" selection-end="94" vertical-scroll-proportion="0.045454547" vertical-offset="0" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/MonthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="8" selection-start="2114" selection-end="2114" vertical-scroll-proportion="-0.635514" vertical-offset="969" max-vertical-offset="1581">
+        <state line="80" column="27" selection-start="2663" selection-end="2663" vertical-scroll-proportion="-0.006122449" vertical-offset="1091" max-vertical-offset="1581">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list_layout.xml">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="141" selection-end="149" vertical-scroll-proportion="0.15315315" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-v11/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="36" selection-start="131" selection-end="131" vertical-scroll-proportion="0.09461967" vertical-offset="0" max-vertical-offset="539">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="151" selection-end="151" vertical-scroll-proportion="0.12615955" vertical-offset="0" max-vertical-offset="539">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetConfigureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="191" selection-end="191" vertical-scroll-proportion="0.28867924" vertical-offset="0" max-vertical-offset="530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/SetOfAdaptorsStudent/AdapterDetailsDay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="0" selection-start="4106" selection-end="4106" vertical-scroll-proportion="0.7931416" vertical-offset="881" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/lessons_list_item_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.64761907" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/item_detail_days.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="45" selection-start="1108" selection-end="1128" vertical-scroll-proportion="0.74689823" vertical-offset="243" max-vertical-offset="731">
+        <state line="37" column="15" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.8634921" vertical-offset="85" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/DetailDayFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="5" selection-start="2051" selection-end="2486" vertical-scroll-proportion="0.8265802" vertical-offset="527" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/appwidget_provider.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="25" selection-start="144" selection-end="144" vertical-scroll-proportion="0.08947369" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/widget_background_conteiner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="8" selection-start="40" selection-end="283" vertical-scroll-proportion="0.16975749" vertical-offset="0" max-vertical-offset="701">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/button_shape_presed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="27" selection-start="198" selection-end="198" vertical-scroll-proportion="0.12125535" vertical-offset="0" max-vertical-offset="701">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/button_shape_unpresed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="8" selection-start="40" selection-end="220" vertical-scroll-proportion="0.16975749" vertical-offset="0" max-vertical-offset="701">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/widget_head_backgraund.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.16975749" vertical-offset="0" max-vertical-offset="701">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/item_widget_list_layot.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="26" selection-start="294" selection-end="294" vertical-scroll-proportion="0.20118344" vertical-offset="0" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="53" selection-start="1894" selection-end="1894" vertical-scroll-proportion="1.0970043" vertical-offset="64" max-vertical-offset="1020">
+          <folding>
+            <element signature="e#626#644#0" expanded="true" />
+            <element signature="e#763#781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/button_backgraund_widget_dark_blue.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="57" selection-start="266" selection-end="266" vertical-scroll-proportion="0.09700428" vertical-offset="0" max-vertical-offset="701">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="34" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/WidgetStudEND/StudEndWidgetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="1" selection-start="4095" selection-end="4244" vertical-scroll-proportion="0.0" vertical-offset="2346" max-vertical-offset="2465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/widget_studend_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="69" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/DataStorageCalendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="144" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/brusd/mediummg/StudentCalendar/FragmentCalendar/CalendarFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="52" selection-start="4420" selection-end="4431" vertical-scroll-proportion="-1.9678457" vertical-offset="2465" max-vertical-offset="6392">
           <folding />
         </state>
       </provider>
@@ -1057,7 +1284,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>Android 4.3 Google APIs</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1069,7 +1296,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>StudentCalendar</last-edited>
+          <last-edited>SM</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1081,7 +1308,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>android-support-v4</last-edited>
+          <last-edited>android-support-v7-appcompat</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

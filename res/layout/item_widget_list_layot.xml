@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#FF8800"
+    >
+    <LinearLayout
+
+        android:id="@+id/pair_color_reflaction_widget"
+        android:layout_height="match_parent"
+        android:layout_width="10dp"
+        android:orientation="horizontal"
+        />
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <TextView
+            android:id="@+id/start_time_tv_widget"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <TextView
+            android:id="@+id/end_time_tv_widget"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/name_of_pair_tv_widget"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1"/>
+</LinearLayout>
